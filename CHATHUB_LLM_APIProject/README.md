@@ -3,60 +3,58 @@
 
 The LLM-ChatHub is an AI-powered data analyst chatbot designed to assist users in extracting valuable insights from unstructured text data available in different sources. The chatbot integrates various natural language processing (NLP) techniques and utilizes the LangChain library, including OpenAI models for language understanding and FAISS for efficient document retrieval.
 
-## Features
+## Features of this Chatbot:
 
-- Load URLs or upload text files containing URLs to fetch article content.
-- Process article content through LangChain's UnstructuredURL Loader
-- Construct an embedding vector using OpenAI's embeddings and leverage FAISS, a powerful similarity search library, to enable swift and effective retrieval of relevant information
-- Interact with the LLM's (Chatgpt) by inputting queries and receiving answers along with source URLs.
+  - Importing URLs or uploading text documents containing web links for article retrieval.
+  - Utilizing LangChain's UnstructuredURL Loader to analyze and preprocess article content.
+  - Generating embedding vectors using OpenAI's embeddings, enhancing the efficiency of information retrieval.
+  - Employing FAISS, a robust similarity search library, to swiftly retrieve pertinent data.
+  - Engaging with the LLM (Chatgpt) by entering queries and receiving responses alongside source URLs.
 
 
-## Installation
+## How to install:
 
 1.Clone this repository to your local machine using:
 
 ```bash
-  git clone https://github.com/codebasics/langchain.git
-```
-2.Navigate to the project directory:
+  git clone https://github.com/Smohanta23/LLM_CHATBOT.git
 
-```bash
-  cd 2_news_research_tool_project
 ```
-3. Install the required dependencies using pip:
+2. Download the required packages and libraries using pip:
 
 ```bash
   pip install -r requirements.txt
 ```
-4.Set up your OpenAI API key by creating a .env file in the project root and adding your API
+4.Get your OpenAI API key by creating a .env file in the project root and adding your API
 
+# You can get your API key from https://platform.openai.com/api-keys
 ```bash
   OPENAI_API_KEY=your_api_key_here
 ```
-## Usage/Examples
+## How to run:
 
 1. Run the Streamlit app by executing:
 ```bash
 streamlit run main.py
 
 ```
+  - Access the web application through your browser.
 
-2.The web app will open in your browser.
+  - Enter URLs directly in the sidebar for quick input.
 
-- On the sidebar, you can input URLs directly.
+  - Start the data loading and processing by selecting "Process URLs."
 
-- Initiate the data loading and processing by clicking "Process URLs."
+  - Witness the system executing text splitting, creating embedding vectors, and optimizing indexing with FAISS.
 
-- Observe the system as it performs text splitting, generates embedding vectors, and efficiently indexes them using FAISS.
+  - Save and index the embeddings using FAISS, boosting retrieval speed.
 
-- The embeddings will be stored and indexed using FAISS, enhancing retrieval speed.
+  - Store the FAISS index in a local file path in pickle format for future reference.
 
-- The FAISS index will be saved in a local file path in pickle format for future use.
-- One can now ask a question and get the answer based on those news articles
+  - Now, inquire and receive answers based on the curated news articles.
 
 ## Project Structure
 
-- main.py: The main Streamlit application script.
-- requirements.txt: A list of required Python packages for the project.
-- faiss_store_openai.pkl: A pickle file to store the FAISS index.
-- .env: Configuration file for storing your OpenAI API key.
+  - main.py: Primary script for the Streamlit application.
+  - requirements.txt: Document listing necessary Python packages for the project.
+  - faiss_store_openai.pkl: Pickle file housing the FAISS index.
+  - .env: Configuration file for secure storage of your OpenAI API key.
